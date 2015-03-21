@@ -1,4 +1,4 @@
-﻿#region LICENSE
+#region LICENSE
 
 // Copyright 2014 LeagueSharp.Loader
 // General.xaml.cs is part of LeagueSharp.Loader.
@@ -29,7 +29,7 @@ namespace LeagueSharp.Loader.Views.Settings
     using System.Windows.Controls;
     using System.Windows.Input;
     using LeagueSharp.Loader.Data;
-
+     using MahApps.Metro;
     #endregion
 
     public partial class General
@@ -121,13 +121,14 @@ namespace LeagueSharp.Loader.Views.Settings
             {
                 ((ComboBox) sender).SelectedIndex = 1;
             }
+        }
             
-        private void Button_Click_1(object sender, RoutedEventArgs e) {
+            private void Button_Click_1(object sender, RoutedEventArgs e) {
 
-            ThemeManager.ChangeAppStyle(Application.Current, ThemeManager.GetAccent(accentArray[n]), ThemeManager.GetAppTheme("BaseLight"));
-            n = (n + 1) % 23;
+                ThemeManager.ChangeAppStyle(Application.Current, ThemeManager.GetAccent(accentArray[n]), ThemeManager.GetAppTheme("BaseLight"));
+                n = (n + 1) % 23;
             
            }
         }
     }
-}
+
